@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
+
+  <LoginVue outputText = 'sdfg'>  </LoginVue>
+  <ChatVue >  </ChatVue>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import LoginVue from './components/LoginVue.vue'
+import ChatVue from './components/ChatVue.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    LoginVue,
+    ChatVue
   }
 }
+
+window.addEventListener('unload', function() {
+   localStorage.removeItem('token');
+});
+ 
 </script>
 
 <style>
