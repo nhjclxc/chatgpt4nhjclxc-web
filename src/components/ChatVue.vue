@@ -3,7 +3,7 @@
 
     <div class="bottom-fixed">
     <!-- <input type="text" v-model="inputText" id="input-box" /> -->
-    <textarea v-model="inputText" id="input-box"  rows="3"  cols="30" maxlength="100" />
+    <textarea v-model="inputText" id="input-box"/>
     <button @click="handleClick" id="submit-btn">发送</button>
   </div>
 
@@ -72,7 +72,8 @@ export default {
 
 
       // 判断是否登录
-      let token = localStorage.getItem('token')
+      // let token = localStorage.getItem('token')
+      let token =  sessionStorage.getItem('token');
       console.log(token  + '  token')
       if (token === null){
         // throw new Error('请先登录')

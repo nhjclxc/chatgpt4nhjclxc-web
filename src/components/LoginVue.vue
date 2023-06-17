@@ -51,7 +51,8 @@ export default {
             
             // 请求成功，将token放入localStorage里面，以后请求都要带上token向服务器发请求
             console.log(token);
-            localStorage.setItem('token', token);
+            // localStorage.setItem('token', token);
+            sessionStorage.setItem('token', token);
         })
         .catch(error => console.error(error))
 
